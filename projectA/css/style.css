@@ -1,0 +1,40 @@
+body {
+    background-color: aliceblue;
+}
+
+p {
+    color: firebrick;
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 50px;
+    color: darkblue;
+    font-family: monospace;
+}
+
+h3 {
+    font-size: 30px;
+    color: darkgreen;
+    font-family: monospace;
+}
+
+/* use . for classes, can be used multiple times 
+each element can have multiple classes */
+.info {
+    color: blue;
+}
+
+/* use # for ids, can only be used once 
+each element can only have one id
+only one of each id per page */
+#name {
+    color: red;
+}
+
+.box {
+    background-color: lightgreen;
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+}
