@@ -56,7 +56,8 @@ let pushed = 0;
 // for adding heads on mouse click
 
 function setup() {
-    createCanvas(800, 500);
+    let canvas = createCanvas(800, 500);
+    canvas.parent("p5-canvas-container");
     background(145, 15, 0);
     let from = color(random(255), random(255), random(255));
     let to = color(random(255), random(255), random(255));
