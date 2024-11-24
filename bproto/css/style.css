@@ -1,0 +1,115 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* .wrapper {
+  background-color: lightgreen;
+} */
+
+/* .top {
+  background-color: coral;
+} */
+
+.bg {
+  background-image: url(../assets/green.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.h1 {
+  font-size: 70px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+#prompt {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 35px;
+}
+
+#submit {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.pageButton {
+  background-color: mediumspringgreen;
+  text-align: center;
+  margin: 0 20px;
+  width: 120px;
+  height: 80px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.pageButton:hover {
+  background-color: lightgreen;
+}
+
+.bottomButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.titleButtons {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.titleContent {
+  text-align: center;
+}
+
+.archives {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.box {
+  background-color: deepskyblue;
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  width: 100wv;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgreen;
+}
+
+.font1 {
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font2 {
+  font-family: "Walter Turncoat", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

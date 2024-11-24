@@ -1,0 +1,106 @@
+/* 
+remove default margins
+*/
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+
+/* 
+apply background colors to see boundaries
+*/
+.wrapper {
+  width: 800px;
+  margin: 50px auto;
+}
+
+/* 
+margin can take different numbers of parameters
+top right bottom left
+top/bottom right/left
+*/
+
+.title-container {
+  background-color: bisque;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-box {
+  background-color: darkseagreen;
+  width: 300px;
+}
+
+.nav-container {
+  background-color: aqua;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#p5-canvas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu {
+  margin: 0 30px;
+}
+
+/* 
+6 flexbox properties:
+justify-content
+align-items
+flex-wrap
+align-content
+flex-direction
+flex-flow
+*/
+
+.flexbox-container {
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: deepskyblue;
+  width: 150px;
+  height: 120px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-box {
+  background-color: lightblue;
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  /* display: none;
+  visibility: hidden; */
+}
+
+#special-box {
+  background-color: lightskyblue;
+  /* visibility: hidden;
+  display: none; */
+}

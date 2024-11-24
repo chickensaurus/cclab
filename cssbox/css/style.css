@@ -1,0 +1,55 @@
+html,
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.box {
+  background-color: aquamarine;
+  width: 50vw;
+  height: 200px;
+  margin: 50px;
+
+  padding: 20px;
+
+  border-width: 10px;
+  border-style: dashed;
+  border-color: blueviolet;
+  /* border: 10px dashed blueviolet; */
+
+  position: absolute;
+  left: 100px;
+  top: 200px;
+}
+
+.wrapper {
+  background-color: coral;
+  margin: 200px, auto;
+}
+
+h1 {
+  /* color: chartreuse; */
+  background-color: aqua;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: cursive;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-highlight {
+  background-color: lightgreen;
+}
