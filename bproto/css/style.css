@@ -4,14 +4,6 @@ body {
   padding: 0;
 }
 
-/* .wrapper {
-  background-color: lightgreen;
-} */
-
-/* .top {
-  background-color: coral;
-} */
-
 .bg {
   background-image: url(../assets/green.avif);
   background-size: cover;
@@ -20,10 +12,39 @@ body {
   height: 100vh;
 }
 
+.bg2 {
+  background-image: url(../assets/marble.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+
+}
+
 .h1 {
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
   margin: 0 auto;
+  padding: 10px;
+}
+
+.h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.h3 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.instructions {
+  font-size: 20px;
+}
+
+#info {
+  text-align: center;
+  font-size: 30px;
 }
 
 canvas {
@@ -34,7 +55,7 @@ canvas {
 #prompt {
   text-align: center;
   margin: 0 auto;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 #submit {
@@ -43,18 +64,36 @@ canvas {
   justify-content: center;
 }
 
+#whole {
+  display: flex;
+}
+
+#left {
+  flex-grow: 1;
+  margin: 30px;
+}
+
+#center {
+  margin: 0 auto;
+}
+
+#right {
+  flex-grow: 1;
+  margin: 30px;
+}
+
 .pageButton {
-  background-color: mediumspringgreen;
+  background-color: lightgreen;
   text-align: center;
   margin: 0 20px;
   width: 120px;
   height: 80px;
-  text-decoration: none;
   font-size: 20px;
+  border-radius: 30px;
 }
 
 .pageButton:hover {
-  background-color: lightgreen;
+  background-color: mediumspringgreen;
 }
 
 .bottomButtons {
@@ -81,6 +120,10 @@ canvas {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+}
+
+#museumtop {
+  width: 100%;
 }
 
 .box {

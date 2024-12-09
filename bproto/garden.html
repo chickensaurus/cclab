@@ -7,31 +7,35 @@
 
   <title>CCLab Project</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Walter+Turncoat&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
   <script src="lib/p5.js"></script>
   <script src="lib/p5.sound.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Walter+Turncoat&display=swap" rel="stylesheet">
+  <script src="js/utils-firebase.js"></script>
 </head>
 
 <body>
   <div class="wrapper bg">
-
     <div class="top">
       <h1 class="h1 font1">the community garden</h1>
     </div>
-
-    <div id="p5-canvas-container2">
+    <div id="p5-canvas-container">
     </div>
-
+    <div>
+      <h3 class="h3 font1">
+        This garden contains every drawing every submitted
+        </h2>
+    </div>
     <div class="bottomButtons">
       <a href="archive.html"><button class="pageButton font2">ARCHIVE</button></a>
       <a href="create.html"><button class="pageButton font2">CREATE ANOTHER</button></a>
     </div>
-
-
   </div>
 
   <!-- the script tag below should always be at the bottom, right before the closing body tag -->

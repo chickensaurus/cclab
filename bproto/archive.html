@@ -7,21 +7,30 @@
 
   <title>CCLab Project</title>
 
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Walter+Turncoat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script src="lib/p5.js"></script>
+  <script src="lib/p5.sound.js"></script>
+  <script src="js/utils-firebase.js"></script>
 </head>
 
 <body>
-  <div class="wrapper bg">
-
+  <div class="wrapper bg2">
+    <div>
+      <img id="museumtop" src="assets/museumtop.png" alt="">
+    </div>
     <div class="top">
       <h1 class="h1 font1">the archive</h1>
     </div>
-
-    <div class="archives">
+    <div id="p5-canvas-container">
+    </div>
+    <!-- <div class="archives">
       <div class="box">art1</div>
       <div class="box">art2</div>
       <div class="box">art3</div>
@@ -34,17 +43,20 @@
       <div class="box">art10</div>
       <div class="box">art11</div>
       <div class="box">art12</div>
-    </div>
-
+      <div class="box">art12</div>
+      <div class="box">art12</div>
+      <div class="box">art12</div>
+      <div class="box">art12</div>
+    </div> -->
     <div class="bottomButtons">
       <a href="garden.html"><button class="pageButton font2">GARDEN</button></a>
       <a href="create.html"><button class="pageButton font2">CREATE ANOTHER</button></a>
     </div>
-
   </div>
 
   <!-- the script tag below should always be at the bottom, right before the closing body tag -->
 
+  <script src="js/archive.js"></script>
 </body>
 
 </html>

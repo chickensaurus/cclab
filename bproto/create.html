@@ -7,37 +7,74 @@
 
   <title>CCLab Project</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Walter+Turncoat&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 
   <script src="lib/p5.js"></script>
   <script src="lib/p5.sound.js"></script>
+  <script src="js/utils-firebase.js"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&family=Walter+Turncoat&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="wrapper bg">
-
     <div class="top">
       <h1 class="h1 font1">plant some seeds</h1>
     </div>
-
-    <div id="p5-canvas-container">
+    <div id="whole" class="font1">
+      <div id="left">
+        <h2 class="h2">
+          How to use
+        </h2>
+        <div class="instructions">
+          <p>
+            Click anywhere on the canvas to place down points. 2 points create one tree
+          </p>
+          <p>
+            You can draw as many trees as you want
+          </p>
+          <p>
+            Press C to clear canvas and start over
+          </p>
+          <p>
+            Click submit to save your sketch
+          </p>
+          <p>
+            Happy drawing!
+          </p>
+        </div>
+      </div>
+      <div id="p5-canvas-container" id="middle">
+      </div>
+      <div id="right">
+        <h2 class="h2">
+          How this works
+        </h2>
+        <div class="instructions">
+          <p>
+            You are creating fractals: a repeating pattern that you can customize
+          </p>
+          <p>
+            The first point determines where the plant starts growing from
+          </p>
+          <p>
+            The second point determines how big the plant will be and the angle it grows
+          </p>
+        </div>
+      </div>
     </div>
-
     <div class="font1" id="prompt">
-      <h3>create something ____</h3>
+      <h3>create something aesthetically pleasing</h3>
     </div>
-
     <div id="submit">
-      <a href="garden.html"><button class="pageButton font2">SUBMIT</button></a>
+      <button onclick="submitTrees()" class="pageButton font2">SUBMIT</button>
     </div>
-
   </div>
-
-  <!-- the script tag below should always be at the bottom, right before the closing body tag -->
-
   <script src="js/generate.js"></script>
 </body>
 
