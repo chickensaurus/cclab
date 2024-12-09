@@ -13,43 +13,27 @@ let dis = 0;
 
 let graphics = []
 let count = 0;
-let g;
-
-// function drawTreeByData(data) {
-//   for (let d of data) {
-//     graphics[count] = createGraphics(200, 200);
-//     graphics[count].background(100);
-//     image(graphics[count], 25 + (count * 200), 25);
-
-//     let t = new Tree(d.x1, d.y1, d.x2, d.y2, d.r, d.g, d.b);
-//     t.calculate();
-//     push();
-//     scale(0.5);
-//     t.create(count);
-//     pop();
-//   }
-//   console.log("ok", graphics);
-// }
+let gr;
 
 function drawTreeByData(data) {
-  g = createGraphics(500, 500);
-  g.background(200);
+  gr = createGraphics(200, 200);
+  gr.angleMode(DEGREES);
+  gr.background(250, 255, 209);
   for (let d of data) {
     let t = new Tree(d.x1, d.y1, d.x2, d.y2, d.r, d.g, d.b);
-    console.log(d.x1, d.y1, d.x2, d.y2, d.r, d.g, d.b);
     t.calculate();
-    // scale(0.5);
-    t.create(count);
+    t.create();
   }
-  image(g, 25, 25);
+  image(gr, 25 + (count % 6 * 225), 25 + (floor(count / 6) * 225));
+  count += 1;
 }
 
 function setup() {
   setupFirebase(data);
 
-  let canvas = createCanvas(1400, 500);
+  let canvas = createCanvas(1375, 1500);
   canvas.parent("p5-canvas-container");
-  background(250, 255, 209);
+  background(220, 255, 194);
   angleMode(DEGREES);
   for (let i = 0; i < 5; i++) {
     string = expand(string);
@@ -62,14 +46,10 @@ function draw() {
 
 class Tree {
   constructor(x1, y1, x2, y2, r, g, b) {
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
-    // this.x1 = x1/2;
-    // this.y1 = y1/2;
-    // this.x2 = x2/2;
-    // this.y2 = y2/2;
+    this.x1 = x1 * 0.4;
+    this.y1 = y1 * 0.4;
+    this.x2 = x2 * 0.4;
+    this.y2 = y2 * 0.4;
     this.r = r || round(random(255));
     this.g = g || round(random(255));
     this.b = b || round(random(255));
@@ -88,40 +68,39 @@ class Tree {
     ang2 = map(dis, 0, 300, 10, 50);
     change = ang2;
     len = proportion;
-    console.log(dis, ang, ang2);
   }
 
   create() {
-    g.push();
-    g.stroke(this.r, this.g, this.b);
-    g.translate(this.x1, this.y1);
+    gr.push();
+    gr.stroke(this.r, this.g, this.b);
+    gr.translate(this.x1, this.y1);
 
-    g.circle(0, 0, 5); // ***
+    gr.circle(0, 0, 5); // ***
 
-    g.rotate(ang);
+    gr.rotate(ang);
     for (let i = 0; i < string.length; i++) {
       switch (string[i]) {
         case 'F':
-          g.line(0, 0, len, 0);
-          g.translate(len, 0);
+          gr.line(0, 0, len, 0);
+          gr.translate(len, 0);
           break;
         case '-':
-          g.rotate(change);
+          gr.rotate(change);
           break;
         case '+':
-          g.rotate(-1 * change);
+          gr.rotate(-1 * change);
           break;
         case '[':
-          g.push();
+          gr.push();
           break;
         case ']':
-          g.pop();
+          gr.pop();
           break;
         default:
           break;
       }
     }
-    g.pop();
+    gr.pop();
   }
 }
 
