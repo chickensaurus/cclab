@@ -1,3 +1,23 @@
+/*
+const graphics = createGraphics(w, h);
+const dataUrl = graphics.elt.toDataURL();
+
+let div = document.createElement("div");
+div.style.backgroundImage = "url(" +dataUrl + ")";
+
+flexContainer = document.getElementById("some-id");
+flexContainer.appendChild( div );
+*/
+
+/*
+EXTRA
+background-image: url( dataUrl );
+//let div = document.getElementById("some-id");
+*/
+
+
+
+
 let data = [];
 
 let trees = [];
@@ -11,12 +31,18 @@ let ang = 0;
 let ang2 = 0;
 let dis = 0;
 
+let countTrees = 0;
+let countDrawings = 0;
+
 function drawTreeByData(data) {
+  countDrawings += 1;
   for (let d of data) {
     let t = new Tree(d.x1, d.y1, d.x2, d.y2, d.r, d.g, d.b);
     t.calculate();
     t.create();
+    countTrees += 1;
   }
+  document.getElementById("countTrees").innerHTML = "Currently, there are " + countTrees + " trees from a total of " + countDrawings + " drawings";
 }
 
 function setup() {

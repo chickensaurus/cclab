@@ -8,20 +8,32 @@ body {
   background-image: url(../assets/green.avif);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
+  background-position: center top;
+  /* height: 100vh; */
 }
 
 .bg2 {
-  background-image: url(../assets/marble.jpeg);
+  background-image: url(../assets/paper.jpg);
   background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center top;
+  /* height: 100vh; */
+}
 
+.bg3 {
+  background-image: url(../assets/springreen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.top {
+  padding-top: 70px;
+  padding-bottom: 20px;
 }
 
 .h1 {
-  font-size: 60px;
+  font-size: 70px;
   text-align: center;
   margin: 0 auto;
   padding: 10px;
@@ -37,8 +49,15 @@ body {
   text-align: center;
 }
 
+.h4 {
+  font-size: 33px;
+  margin: 10px 60px;
+}
+
 .instructions {
-  font-size: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 #info {
@@ -51,16 +70,26 @@ canvas {
   margin: 0 auto;
 }
 
-#prompt {
+#promptButton {
   text-align: center;
+  font-size: 28px;
+  justify-content: center;
+  background-color: lightgreen;
+  border-radius: 30px;
   margin: 0 auto;
-  font-size: 25px;
+  display: block;
+  height: 70px;
+}
+
+#promptButton:hover {
+  background-color: mediumspringgreen;
 }
 
 #submit {
   text-align: center;
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 
 #whole {
@@ -99,7 +128,7 @@ canvas {
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin: 20px auto;
+  padding-bottom: 20px;
 }
 
 .titleButtons {
@@ -125,14 +154,11 @@ canvas {
   width: 100%;
 }
 
-.box {
-  background-color: deepskyblue;
-  width: 150px;
-  height: 150px;
-  margin: 30px;
+#container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .start {
@@ -141,7 +167,6 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightgreen;
 }
 
 .font1 {
@@ -154,4 +179,9 @@ canvas {
   font-family: "Walter Turncoat", cursive;
   font-weight: 400;
   font-style: normal;
+}
+
+.gardendivs p {
+  flex-grow: 1;
+  text-align: center;
 }

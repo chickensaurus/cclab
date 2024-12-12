@@ -11,12 +11,15 @@ let ang = 0;
 let ang2 = 0;
 let dis = 0;
 
+let sent = 0;
+
 function submitTrees() {
   sendData(data);
+  sent = 1;
 
   setTimeout(function () {
     window.open("garden.html", "_self");
-  }, 1000);
+  }, 800);
 }
 
 function plantSeed() {
@@ -68,7 +71,13 @@ function setup() {
 }
 
 function draw() {
-  //
+  if (sent) {
+    fill(250, 255, 209);
+    stroke(180, 201, 93);
+    strokeWeight(5);
+    rect(-10, -10, sent * 15, height + 100);
+    sent += 1;
+  }
 }
 
 function mousePressed() {
@@ -108,16 +117,13 @@ class Tree {
     ang2 = map(dis, 0, 300, 10, 50);
     change = ang2;
     len = proportion;
-    console.log(dis, ang, ang2);
   }
 
   create() {
     push();
     stroke(this.r, this.g, this.b);
     translate(this.x1, this.y1);
-
     circle(0, 0, 5); // ***
-
     rotate(ang);
     for (let i = 0; i < string.length; i++) {
       switch (string[i]) {

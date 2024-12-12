@@ -11,28 +11,37 @@ let ang = 0;
 let ang2 = 0;
 let dis = 0;
 
-let graphics = []
-let count = 0;
-let gr;
-
 function drawTreeByData(data) {
-  gr = createGraphics(200, 200);
-  gr.angleMode(DEGREES);
-  gr.background(250, 255, 209);
+  const graphics = createGraphics(200, 200);
+
+  graphics.angleMode(DEGREES);
+  graphics.background(250, 255, 209);
   for (let d of data) {
     let t = new Tree(d.x1, d.y1, d.x2, d.y2, d.r, d.g, d.b);
     t.calculate();
-    t.create();
+    t.create(graphics);
   }
-  image(gr, 25 + (count % 6 * 225), 25 + (floor(count / 6) * 225));
-  count += 1;
+
+  const dataUrl = graphics.elt.toDataURL();
+
+  let div = document.createElement("div");
+  div.style.backgroundImage = "url(" + dataUrl + ")";
+  div.style.backgroundSize = "contain";
+  div.style.width = "200px";
+  div.style.height = "200px";
+  div.style.display = "inline-block";
+  div.style.margin = "10px";
+
+  let flexContainer = document.getElementById("container");
+  flexContainer.appendChild(div);
+
 }
 
 function setup() {
   setupFirebase(data);
-
-  let canvas = createCanvas(1375, 1500);
-  canvas.parent("p5-canvas-container");
+  noCanvas();
+  // let canvas = createCanvas(1000, 1000);
+  // canvas.parent("p5-canvas-container");
   background(220, 255, 194);
   angleMode(DEGREES);
   for (let i = 0; i < 5; i++) {
@@ -70,7 +79,7 @@ class Tree {
     len = proportion;
   }
 
-  create() {
+  create(gr) {
     gr.push();
     gr.stroke(this.r, this.g, this.b);
     gr.translate(this.x1, this.y1);
