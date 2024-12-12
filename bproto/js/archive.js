@@ -84,7 +84,7 @@ class Tree {
     gr.stroke(this.r, this.g, this.b);
     gr.translate(this.x1, this.y1);
 
-    gr.circle(0, 0, 5); // ***
+    gr.circle(0, 0, 2); // ***
 
     gr.rotate(ang);
     for (let i = 0; i < string.length; i++) {

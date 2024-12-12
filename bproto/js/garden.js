@@ -80,7 +80,7 @@ class Tree {
     let v1 = createVector(this.x2 - this.x1, this.y2 - this.y1);
     pop();
     ang = v0.angleBetween(v1);
-    dis = dist(this.x1, this.y1, this.x1, this.y2);
+    dis = dist(this.x1, this.y1, this.x2, this.y2);
     let proportion = map(dis, 0, 300, 0, 0.5)
     ang2 = map(dis, 0, 300, 10, 50);
     change = ang2;
